@@ -1,0 +1,16 @@
+[
+{
+  "model": "environments.environment",
+  "pk": 1,
+  "fields": {
+    "name": "Indoor"
+  }
+},
+{
+  "model": "environments.environment",
+  "pk": 2,
+  "fields": {
+    "name": "Outdoor"
+  }
+}
+]

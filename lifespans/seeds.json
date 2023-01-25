@@ -1,0 +1,23 @@
+[
+{
+  "model": "lifespans.lifespan",
+  "pk": 1,
+  "fields": {
+    "name": "13 years"
+  }
+},
+{
+  "model": "lifespans.lifespan",
+  "pk": 2,
+  "fields": {
+    "name": "1-3 years"
+  }
+},
+{
+  "model": "lifespans.lifespan",
+  "pk": 3,
+  "fields": {
+    "name": "4-7 years"
+  }
+}
+]

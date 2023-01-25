@@ -1,0 +1,52 @@
+[
+{
+  "model": "pets.pet",
+  "pk": 1,
+  "fields": {
+    "name": "Gobolino",
+    "animal": "Bombay Cat",
+    "cover_image": "cat.jpg",
+    "environments": [
+      2
+    ],
+    "lifespans": [
+      1
+    ]
+  }
+},
+{
+  "model": "pets.pet",
+  "pk": 2,
+  "fields": {
+    "name": "Mr Rebus",
+    "animal": "Persian cat",
+    "cover_image": "pic.jpg",
+    "environments": [],
+    "lifespans": []
+  }
+},
+{
+  "model": "pets.pet",
+  "pk": 3,
+  "fields": {
+    "name": "Fleurette",
+    "animal": "Tabby cat",
+    "cover_image": "picture.jpeg",
+    "environments": [],
+    "lifespans": []
+  }
+},
+{
+  "model": "pets.pet",
+  "pk": 5,
+  "fields": {
+    "name": "Eloise",
+    "animal": "French bulldog",
+    "cover_image": "pic.jpg",
+    "environments": [
+      1
+    ],
+    "lifespans": []
+  }
+}
+]
