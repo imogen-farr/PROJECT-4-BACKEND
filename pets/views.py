@@ -6,7 +6,7 @@ from django.db import IntegrityError
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 from .models import Pet
-from .serializers import PetSerializer
+from .serializers import PetSerializer, PopulatedPetSerializer
 
 
 class PetListView(APIView):
@@ -16,11 +16,12 @@ class PetListView(APIView):
     def get(self, _request):
         pets = Pet.objects.all()  # get everything from the shows table in the db
         # run everything through the serializer
-        serialized_products = PetSerializer(pets, many=True)
+        serialized_pets = PetSerializer(pets, many=True)
         # return the response and a status
-        return Response(serialized_products.data, status=status.HTTP_200_OK)
+        return Response(serialized_pets.data, status=status.HTTP_200_OK)
 
     def post(self, request):
+        request.data['owner'] = request.user.id
         pet_to_add = PetSerializer(data=request.data)
         try:
             pet_to_add.is_valid()
@@ -42,23 +43,23 @@ class PetListView(APIView):
 
 
 class PetDetailView(APIView):
+    permission_classes = (IsAuthenticatedOrReadOnly, )
     # show this one first
-    def get(self, _request, pk):
+
+    def get_pet(self, pk):
         try:
-            pet = Pet.objects.get(pk=pk)
-            serialized_pet = PetSerializer(pet)
-            return Response(serialized_pet.data, status=status.HTTP_200_OK)
+            return Pet.objects.get(pk=pk)
         except Pet.DoesNotExist:
             raise NotFound(detail="Can't find that pet!")
 
     def get(self, _request, pk):
-        # we use a keywprd argument so we don't have to pass self through to get_album
-        pet = self.get_album(pk=pk)
-        serialized_pet = PetSerializer(pet)
+        # we use a keywprd argument so we don't have to pass self through to get_pet
+        pet = self.get_pet(pk=pk)
+        serialized_pet = PopulatedPetSerializer(pet)
         return Response(serialized_pet.data, status=status.HTTP_200_OK)
 
 
-def get(self, request, pk):
+def put(self, request, pk):
     pet_to_edit = self.get_pet(pk=pk)
     updated_pet = PetSerializer(pet_to_edit, data=request.data)
     try:

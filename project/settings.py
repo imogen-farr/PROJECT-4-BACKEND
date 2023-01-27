@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'environments',
     'lifespans',
     'jwt_auth',
+    'comments',
 ]
 
 MIDDLEWARE = [

@@ -21,5 +21,6 @@ urlpatterns = [
     path('api/pets/', include('pets.urls')),
     path('api/environments/', include('environments.urls')),
     path('api/lifespans/', include('lifespans.urls')),
+    path('api/comments/', include('comments.urls')),
     path('api/auth/', include('jwt_auth.urls')),
 ]
