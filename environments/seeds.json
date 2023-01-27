@@ -3,14 +3,21 @@
   "model": "environments.environment",
   "pk": 1,
   "fields": {
-    "name": "Indoor"
+    "name": "Outdoor"
   }
 },
 {
   "model": "environments.environment",
   "pk": 2,
   "fields": {
-    "name": "Outdoor"
+    "name": "Indoor"
+  }
+},
+{
+  "model": "environments.environment",
+  "pk": 3,
+  "fields": {
+    "name": "Indoor & Outdoor"
   }
 }
 ]

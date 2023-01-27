@@ -6,7 +6,7 @@ echo "creating lifespans/seeds.json"
 python manage.py dumpdata lifespans --output lifespans/seeds.json --indent=2;
 
 echo "creating environments/seeds.json"
-python manage.py dumpdata environements --output environements/seeds.json --indent=2;
+python manage.py dumpdata environments --output environments/seeds.json --indent=2;
 
 echo "creating comments/seeds.json"
 python manage.py dumpdata comments --output comments/seeds.json --indent=2;

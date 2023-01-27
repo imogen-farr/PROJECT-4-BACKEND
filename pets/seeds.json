@@ -3,11 +3,12 @@
   "model": "pets.pet",
   "pk": 1,
   "fields": {
-    "name": "Gobolino",
-    "animal": "Bombay Cat",
-    "cover_image": "cat.jpg",
+    "name": "Fez",
+    "animal": "Speckled Tree Frog",
+    "cover_image": "frog.jpg",
+    "owner": 2,
     "environments": [
-      2
+      1
     ],
     "lifespans": [
       1
@@ -18,11 +19,16 @@
   "model": "pets.pet",
   "pk": 2,
   "fields": {
-    "name": "Mr Rebus",
-    "animal": "Persian cat",
-    "cover_image": "pic.jpg",
-    "environments": [],
-    "lifespans": []
+    "name": "suzie",
+    "animal": "Anaconda",
+    "cover_image": "snake.jpg",
+    "owner": 1,
+    "environments": [
+      2
+    ],
+    "lifespans": [
+      2
+    ]
   }
 },
 {
@@ -31,22 +37,95 @@
   "fields": {
     "name": "Fleurette",
     "animal": "Tabby cat",
-    "cover_image": "picture.jpeg",
-    "environments": [],
-    "lifespans": []
+    "cover_image": "cat.jpg",
+    "owner": 2,
+    "environments": [
+      2
+    ],
+    "lifespans": [
+      3
+    ]
+  }
+},
+{
+  "model": "pets.pet",
+  "pk": 4,
+  "fields": {
+    "name": "Mr Rebus",
+    "animal": "Persian cat",
+    "cover_image": "cat.jpg",
+    "owner": 2,
+    "environments": [
+      2
+    ],
+    "lifespans": [
+      3
+    ]
   }
 },
 {
   "model": "pets.pet",
   "pk": 5,
   "fields": {
-    "name": "Eloise",
-    "animal": "French bulldog",
-    "cover_image": "pic.jpg",
+    "name": "Lou",
+    "animal": "Gecko",
+    "cover_image": "gecko.jpg",
+    "owner": 1,
+    "environments": [
+      2,
+      3
+    ],
+    "lifespans": [
+      1
+    ]
+  }
+},
+{
+  "model": "pets.pet",
+  "pk": 6,
+  "fields": {
+    "name": "Milo",
+    "animal": "Ant",
+    "cover_image": "ant.jpg",
+    "owner": 2,
     "environments": [
       1
     ],
-    "lifespans": []
+    "lifespans": [
+      4
+    ]
+  }
+},
+{
+  "model": "pets.pet",
+  "pk": 7,
+  "fields": {
+    "name": "Carla",
+    "animal": "French bulldog",
+    "cover_image": "dog.jpg",
+    "owner": 1,
+    "environments": [
+      3
+    ],
+    "lifespans": [
+      3
+    ]
+  }
+},
+{
+  "model": "pets.pet",
+  "pk": 8,
+  "fields": {
+    "name": "Fez",
+    "animal": "Mouse",
+    "cover_image": "mouse.jpg",
+    "owner": 2,
+    "environments": [
+      2
+    ],
+    "lifespans": [
+      5
+    ]
   }
 }
 ]
